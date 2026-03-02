@@ -1,0 +1,199 @@
+/* PRELOADER */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 350vh;
+  background-color: #000;
+  background-image: url("../assets/bg.jpg.jpeg");
+  background-size: cover;   
+  background-position: top center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  }
+
+/* NAVBAR */  
+.nav-bar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 40px;
+ 
+}
+.left,
+.right{
+  display: flex;
+  gap: 25px;
+  padding: 0 20px;
+
+}
+
+.nav-link {
+  position: relative; /* Essential for positioning the pseudo-element */
+  color: white;
+  text-decoration: none; /* Removes default underline */
+  padding: 10px 0; /* Add padding for the line to appear under the text */
+  display: inline-block; /* Allows the link to have width and height properties */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Thickness of the line */
+  bottom: 0; /* Position the line at the bottom of the link */
+  left: 0;
+  background-color: red; /* Color of the line */
+  transform: scaleX(0); /* Initially hide the line */
+  transform-origin: bottom left; /* Set the origin of the transformation to the left */
+  transition: transform 0.3s ease-out; /* Smooth transition for the effect */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Expand the line to full width on hover */
+  transform-origin: bottom left; /* Ensure it expands from the left */
+}
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.center img{
+  height: 275px; 
+  margin-top: 100px;
+}
+#stranger{
+  width: 820px;
+  position: relative;
+  left:590px;
+  top: 800px;
+}
+.date{
+  color: white;
+  font-size: 22px;
+  height: auto;
+  width: 400px;
+  position: relative;
+  left: 300px;
+  top: 540px;
+}
+h2{
+  color: white;
+  font-size: 95px;
+  font-weight: 200;
+  height: auto;
+  width: 600px;
+  position: relative;
+  left: 300px;
+  top: 540px;
+}
+.text{
+  position: absolute;
+  height: auto;
+  width: auto;
+}
+.cast{
+  color: white;
+  position: relative;
+  top: 1400px;
+  height: auto;
+  width: auto;
+  font-size: 50px;
+}
+.cast-title{
+  position: relative;
+  top: -120px;   /* move up/down */
+  left: 0px;   /* move left/right */
+  text-align: center;
+}
+.characters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.character {
+  text-align: center;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.character img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.name {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size:32px
+}
+
+.nick-name {
+  color: #bbb;
+  font-size: 18px;
+}
+.character:nth-child(1){
+  transform: translateY(-60px);
+}
+
+.character:nth-child(2){
+  transform: translateY(50px);
+}
+
+.character:nth-child(3){
+  transform: translateY(-30px);
+}
+
+.character:nth-child(4){
+  transform: translateY(50px);
+}
+
+.character:nth-child(5){
+  transform: translateY(-45px);
+}
+.mike{
+  position: relative;
+  top: 1250px;
+  size:500px;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 70%,
+    rgba(0,0,0,0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 70%,
+    rgba(0,0,0,0) 100%
+  );
+}
+footer{
+  position: absolute;
+  bottom:-250%;
+  width: 100%;
+  height: 45px;
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 0 0;
+}

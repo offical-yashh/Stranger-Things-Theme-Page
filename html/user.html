@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Become the Hero & save Hawkings </title>
+    <link rel="stylesheet" href="../Css/user.css">
+</head>
+<body>
+    <div class="full">
+        <nav class="nav-bar">
+            <div class="left">
+                <a href="/html/index.html" class="nav-link">Story</a>
+                <a href="/html/Characters.html" class="nav-link">Characters</a>
+                <a href="/html/about-us.html" class="nav-link">About Us</a>
+            </div>
+
+            <div class="center">
+                <!-- <img src="../assets/login_assets/Stranger_Things_logo-removebg-preview.png" alt="logo"> -->
+            </div>
+
+            <div class="right">
+                <a href="/html/reviewmain.html" class="nav-link">Review</a>
+                <a href="/html/quest.html" class="nav-link">Quest</a>
+                <a href="/html/user.html" class="nav-link active">User</a>
+            </div>
+        </nav>
+        <div class="upper-glow"></div>
+        <div class="logo-background"><img src="../assets/login_assets/paint_brush_black-removebg-preview.png" alt=""></div>
+        <div class="center">
+            <img src="../assets/login_assets/Stranger_Things_logo-removebg-preview.png" alt="">
+        </div>
+        <div class="lower-glow"></div>
+        <div class="glass-container">
+            <div class="upper-text">
+                <p>Get Your Character</p>
+            </div>
+                <div class="input">
+                    <input id="nameInput" type="text" placeholder="Enter The Name" required>
+                </div>
+                <button onclick="openrandompg()" class="btn-container" type="submit">
+                    <a>
+                        <div class="btn">
+                            Click Me!
+                        </div></a>
+                    
+                </button>
+        </div>
+        </div>
+    
+
+<script>function openrandompg() {
+
+  const name = document.getElementById("nameInput").value.trim();
+
+  // Validation
+  if (name === "") {
+    return; // stop function if empty
+  }
+
+  // Pages list
+  const pages = [
+    "dustin.html",
+    "eleven.html",
+    "steve.html",
+    "vecna.html",
+    "mindflayer.html"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * pages.length);
+
+  window.location.href = pages[randomIndex];
+  document.getElementById('nameInput').value='';
+}
+</script>
+</body>
+</html>

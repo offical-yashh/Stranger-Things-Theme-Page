@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@200;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Oswald:wght@200..700&family=Poppins:wght@200;300;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: auto;
+    width: auto;
+    background-image: url(../assets/review_assets/reviewmain\ bg.png);
+    background-repeat: no-repeat;
+    background-clip:border-box;
+    background-size: cover;
+    overflow-x: hidden;
+
+
+}
+.review-container{
+    height: fit-content;
+    width: 100vw;
+    display: block;
+    align-items: center;
+    /* border: 2px solid red; */
+    overflow: none;
+}
+/* NAVBAR */  
+.nav-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 40px;
+   
+}
+.left,
+.right{
+    display: flex;
+    gap: 25px;
+    padding: 0 20px;
+
+}
+.nav-link {
+    position: relative; /* Essential for positioning the pseudo-element */
+    color: white;
+    text-decoration: none; /* Removes default underline */
+    padding: 10px 0; /* Add padding for the line to appear under the text */
+    display: inline-block; /* Allows the link to have width and height properties */
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    bottom: 0; /* Position the line at the bottom of the link */
+    left: 0;
+    background-color: red; /* Color of the line */
+    transform: scaleX(0); /* Initially hide the line */
+    transform-origin: bottom left; /* Set the origin of the transformation to the left */
+    transition: transform 0.3s ease-out; /* Smooth transition for the effect */
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1); /* Expand the line to full width on hover */
+    transform-origin: bottom left; /* Ensure it expands from the left */
+  }
+  .nav-link.active::after {
+    transform: scaleX(1);
+}
+  .center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+.center>img{
+    position: relative;
+    bottom: -50%;
+    left: 0%;
+    height: 55px;
+    width: auto;
+    /* border: 2px solid red; */
+}
+.page-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+    /* border: 2px solid red; */
+}
+.season-container{
+    display: flex;
+    height: 40rem;
+    width: 19vw;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.season1>img{
+    position: relative;
+    left: -34%;
+    height: auto;
+    width: 500px;
+}
+.season2>img{
+    position: relative;
+    left: -30%;
+    height: auto;
+    width: 500px;
+}
+.season3>img{
+    position: relative;
+    left: -25%;
+    height: auto;
+    width: 500px;
+}
+.season4>img{
+    position: relative;
+    left: -15%;
+    height: auto;
+    width: 500px;
+}
+.season5>img{
+    position: relative;
+    left: -18%;
+    height: auto;
+    width: 500px;
+}
+.review-card-1:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+
+    
+}
+/* Container with your specific dimensions */
+.review-card-1{
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ineria Serif';
+    position: absolute;
+    z-index: 1;
+    width: 19vw;
+    height: 40rem;
+    /* background-color: rgba(0, 0, 0, 1); */
+    color: white;
+    border: 2px solid var(--stranger-red);
+    border-radius: 12px;
+    padding: 1.5rem;
+    /* border: 2px solid red; */
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(225, 18, 37, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: var(--stranger-red) transparent;
+    transition: opacity .3s ease-in-out ;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+.review-card-1::-webkit-scrollbar {
+    width: 5px;
+}
+.review-card-1::-webkit-scrollbar-thumb {
+    background-color: var(--stranger-red);
+}
+
+.review-card-2:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+
+    
+}
+/* Container with your specific dimensions */
+.review-card-2{
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ineria Serif';
+    position: absolute;
+    left: 20.5%;
+    z-index: 1;
+    width: 19vw;
+    height: 40rem;
+    /* background-color: rgba(0, 0, 0, 1); */
+    color: white;
+    border: 2px solid var(--stranger-red);
+    border-radius: 12px;
+    padding: 1.5rem;
+    /* border: 2px solid red; */
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(225, 18, 37, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: var(--stranger-red) transparent;
+    transition: opacity .3s ease-in-out ;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+.review-card-2::-webkit-scrollbar {
+    width: 5px;
+}
+.review-card-2::-webkit-scrollbar-thumb {
+    background-color: var(--stranger-red);
+}
+
+.review-card-3:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+
+    
+}
+/* Container with your specific dimensions */
+.review-card-3{
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ineria Serif';
+    position: absolute;
+    left: 40.5%;
+    z-index: 1;
+    width: 19vw;
+    height: 40rem;
+    /* background-color: rgba(0, 0, 0, 1); */
+    color: white;
+    border: 2px solid var(--stranger-red);
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(225, 18, 37, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: var(--stranger-red) transparent;
+    transition: opacity .3s ease-in-out ;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+.review-card-3::-webkit-scrollbar {
+    width: 5px;
+}
+.review-card-3::-webkit-scrollbar-thumb {
+    background-color: var(--stranger-red);
+}
+
+.review-card-4:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+
+    
+}
+/* Container with your specific dimensions */
+.review-card-4{
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ineria Serif';
+    position: absolute;
+    left: 60.5%;
+    z-index: 1;
+    width: 19vw;
+    height: 40rem;
+    /* background-color: rgba(0, 0, 0, 1); */
+    color: white;
+    border: 2px solid var(--stranger-red);
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(225, 18, 37, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: var(--stranger-red) transparent;
+    transition: opacity .3s ease-in-out ;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+.review-card-4::-webkit-scrollbar {
+    width: 5px;
+}
+.review-card-4::-webkit-scrollbar-thumb {
+    background-color: var(--stranger-red);
+}
+
+.review-card-5:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+
+    
+}
+/* Container with your specific dimensions */
+.review-card-5{
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ineria Serif';
+    position: absolute;
+    left: 80.5%;
+    z-index: 1;
+    width: 19vw;
+    height: 40rem;
+    /* background-color: rgba(0, 0, 0, 1); */
+    color: white;
+    border: 2px solid var(--stranger-red);
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(225, 18, 37, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: var(--stranger-red) transparent;
+    transition: opacity .3s ease-in-out ;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+.review-card-5::-webkit-scrollbar {
+    width: 5px;
+}
+.review-card-5::-webkit-scrollbar-thumb {
+    background-color: var(--stranger-red);
+}
+
+h1 {
+    font-family: 'serif'; /* Closest to the ST font style */
+    color: var(--stranger-red);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px rgba(225, 18, 37, 0.8);
+
+}
+.subtitle {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.stats-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    /* border: 2px solid red; */
+}
+
+.stats-table td {
+    padding: 5px 0;
+}
+
+.label {
+    color: var(--stranger-red);
+    font-weight: bold;
+    width: 19vw;
+}
+
+.value {
+    text-align: right;
+}
+
+h2 {
+    font-size: 1.1rem;
+    border-left: 3px solid var(--stranger-red);
+    padding-left: 10px;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.rating-box {
+    width: 14.5vw;
+    background: rgba(225, 18, 37, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 2px solid #555;
+    margin: 10px 0;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+.glassbg{
+    position: absolute;
+    top: 9.5%;
+    left: 0%;
+    height: 40.5rem;
+    width: 100vw;
+    display: block;
+    justify-items: center;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-top: none;
+    z-index: -1;
+    padding: 24px 64px;
+    
+}
+
