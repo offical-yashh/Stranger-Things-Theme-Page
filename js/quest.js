@@ -71,7 +71,7 @@
                 levelText.classList.add('victory-text');
                 scenarioText.innerText = "Transmission fully decrypted.";
                 optionsContainer.innerHTML = ''; // Clear buttons
-                document.body.style.backgroundImage = "url('/assets/quest_assets/safe.png')";
+                document.body.style.backgroundImage = "url('../assets/quest_assets/safe.png')";
             }
         }
 
